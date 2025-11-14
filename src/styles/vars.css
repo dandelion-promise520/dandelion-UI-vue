@@ -1,41 +1,22 @@
 :root {
   --dl-color-white: #ffffff;
   --dl-color-black: #000000;
-  --dl-color-primary: #409eff;
-  --dl-color-primary-light-3: #79bbff;
-  --dl-color-primary-light-5: #a0cfff;
-  --dl-color-primary-light-7: #c6e2ff;
-  --dl-color-primary-light-8: #d9ecff;
-  --dl-color-primary-light-9: #ecf5ff;
-  --dl-color-primary-dark-2: #337ecc;
-  --dl-color-success: #67c23a;
-  --dl-color-success-light-3: #95d475;
-  --dl-color-success-light-5: #b3e19d;
-  --dl-color-success-light-7: #d1edc4;
-  --dl-color-success-light-8: #e1f3d8;
-  --dl-color-success-light-9: #f0f9eb;
-  --dl-color-success-dark-2: #529b2e;
-  --dl-color-warning: #e6a23c;
-  --dl-color-warning-light-3: #eebe77;
-  --dl-color-warning-light-5: #f3d19e;
-  --dl-color-warning-light-7: #f8e3c5;
-  --dl-color-warning-light-8: #faecd8;
-  --dl-color-warning-light-9: #fdf6ec;
-  --dl-color-warning-dark-2: #b88230;
-  --dl-color-danger: #f56c6c;
-  --dl-color-danger-light-3: #f89898;
-  --dl-color-danger-light-5: #fab6b6;
-  --dl-color-danger-light-7: #fcd3d3;
-  --dl-color-danger-light-8: #fde2e2;
-  --dl-color-danger-light-9: #fef0f0;
-  --dl-color-danger-dark-2: #c45656;
-  --dl-color-info: #909399;
-  --dl-color-info-light-3: #b1b3b8;
-  --dl-color-info-light-5: #c8c9cc;
-  --dl-color-info-light-7: #dedfe0;
-  --dl-color-info-light-8: #e9e9eb;
-  --dl-color-info-light-9: #f4f4f5;
-  --dl-color-info-dark-2: #73767a;
+  --colors: (
+    primary: #409eff,
+    success: #67c23a,
+    warning: #e6a23c,
+    danger: #f56c6c,
+    info: #909399
+  );
+
+  @each $val, $color in var(--colors) {
+    --dl-color-$(val): $(color);
+    @for $i from 3 to 9 by 2 {
+      --dl-color-$(val)-light-$(i): mix(#fff, $(color), .$(i));
+    }
+    --dl-color-$(val)-light-8: mix(#fff, $(color), 0.8);
+    --dl-color-$(val)-dark-2: mix(#000, $(color), 0.2);
+  }
 
   --dl-bg-color: #ffffff;
   --dl-bg-color-page: #f2f3f5;

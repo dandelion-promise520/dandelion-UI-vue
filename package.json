@@ -9,12 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "postcss-advanced-variables": "^5.0.0",
+    "postcss-color-mix": "^1.1.0",
+    "postcss-each-variables": "^0.3.0",
+    "postcss-for": "^2.1.1",
     "vue": "^3.5.24"
   },
   "devDependencies": {
     "@types/node": "^24.10.0",
-    "@types/postcss-advanced-variables": "^3.0.0",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.8.1",
     "postcss": "^8.5.6",

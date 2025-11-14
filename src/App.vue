@@ -33,6 +33,7 @@ import { DlButton } from "./components/button";
 
     <div class="button-row">
       <dl-button type="primary" size="large">large</dl-button>
+      <dl-button type="primary">Default</dl-button>
       <dl-button type="primary" size="small">small</dl-button>
     </div>
   </div>
