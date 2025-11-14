@@ -1,0 +1,17 @@
+body {
+  font-family: var(--dl-font-family);
+  font-weight: 400;
+  font-size: var(--dl-font-size-base);
+  color: var(--dl-text-color-primary);
+}
+
+a {
+  &:hover,
+  &:focus {
+    color: var(--dl-color-primary-light-3);
+  }
+
+  &:active {
+    color: var(--dl-color-primary-dark-2);
+  }
+}
