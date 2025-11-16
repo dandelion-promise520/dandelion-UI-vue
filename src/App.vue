@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { DlButton } from "./components/button";
+import { DlCollapse } from "./components/collapse";
 </script>
 
 <template>
@@ -36,6 +37,10 @@ import { DlButton } from "./components/button";
       <dl-button type="primary">Default</dl-button>
       <dl-button type="primary" size="small">small</dl-button>
     </div>
+  </div>
+
+  <div class="collapse-example">
+    <DlCollapse></DlCollapse>
   </div>
 </template>
 
